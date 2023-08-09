@@ -60,17 +60,17 @@ int main(int argc, char *argv[]) {
   Color color(255, 255, 0);  // Default color is yellow
 
     // Read the color information from the "color.txt" file.
-  FILE* color_file = fopen("/home/admin/rpi-rgb-led-matrix/examples-api-use/color_text.txt", "r");
+   FILE* color_file = fopen("/home/admin/rpi-rgb-led-matrix/examples-api-use/color_text.txt", "r");
   if (color_file == NULL) {
-    fprintf(stderr, "Error: Unable to open color file 'color.txt'\n");
+     fprintf(stderr, " Unable to open color ");
     return 1;
   }
 
   int color_number;
   if (fscanf(color_file, "%d", &color_number) != 1) {
-    fprintf(stderr, "Error: Unable to read color information from file 'color.txt'\n");
+     fprintf(stderr, "Error: Unable to read color");
     printf("color code: %d",color_number);
-    fclose(color_file);
+     fclose(color_file);
     return 1;
   }
 
@@ -79,11 +79,11 @@ int main(int argc, char *argv[]) {
   if (color_number == 1) {
     color = Color(255, 0, 0); // Red
   } else if (color_number == 2) {
-    color = Color(0, 255, 0); // Green
+       color = Color(0, 255, 0); // Green
   } else if (color_number == 3) {
-    color = Color(0, 0, 255); // Blue
-  } else {
-    fprintf(stderr, "Error: Invalid color number in file 'color.txt'\n");
+     color = Color(0, 0, 255); // Blue
+     } else {
+    fprintf(stderr, "Error: Invalid color number\n");
     return 1;
   }
 
