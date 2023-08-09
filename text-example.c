@@ -14,6 +14,10 @@
 #include <unistd.h>
 
 using namespace rgb_matrix;
+//int r1 = 0;
+//int b1 = 0;
+//int g1 = 225;
+
 
 static int usage(const char *progname) {
   fprintf(stderr, "usage: %s [options]\n", progname);
@@ -52,8 +56,40 @@ int main(int argc, char *argv[]) {
                                          &matrix_options, &runtime_opt)) {
     return usage(argv[0]);
   }
+  
+  Color color(255, 255, 0);  // Default color is yellow
 
-  Color color(255, 255, 0);
+    // Read the color information from the "color.txt" file.
+  FILE* color_file = fopen("/home/admin/rpi-rgb-led-matrix/examples-api-use/color_text.txt", "r");
+  if (color_file == NULL) {
+    fprintf(stderr, "Error: Unable to open color file 'color.txt'\n");
+    return 1;
+  }
+
+  int color_number;
+  if (fscanf(color_file, "%d", &color_number) != 1) {
+    fprintf(stderr, "Error: Unable to read color information from file 'color.txt'\n");
+    printf("color code: %d",color_number);
+    fclose(color_file);
+    return 1;
+  }
+
+  fclose(color_file);
+
+  if (color_number == 1) {
+    color = Color(255, 0, 0); // Red
+  } else if (color_number == 2) {
+    color = Color(0, 255, 0); // Green
+  } else if (color_number == 3) {
+    color = Color(0, 0, 255); // Blue
+  } else {
+    fprintf(stderr, "Error: Invalid color number in file 'color.txt'\n");
+    return 1;
+  }
+
+
+
+  //Color color(r1, g1, b1);
   Color bg_color(0, 0, 0);
   Color flood_color(0, 0, 0);
   Color outline_color(0, 0, 0);
