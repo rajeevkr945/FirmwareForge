@@ -1,5 +1,6 @@
 import os
 import time
+import subprocess
 import sys
 import dbus, dbus.mainloop.glib
 from gi.repository import GLib
@@ -58,21 +59,22 @@ class RxCharacteristic(Characteristic):
                                 ['write'], service)
 
     def WriteValue(self, value, options):
-        print('remote: {}'.format(bytearray(value).decode()))
+        print('entering write value'.format(bytearray(value).decode()))
         byte_array = bytearray(value)
 
         # Convert the received byte array to a string
         data_str = byte_array.decode('utf-8')
 
         # Store the received string in the "rgb_text.txt" file
-        file_path = '/home/admin/rgb_text.txt'
+        file_path = '/home/admin/rpi-rgb-led-matrix/examples-api-use/rgb_text.txt'
         with open(file_path, 'wb') as f:
             f.write(data_str.encode('utf-8'))
+            print('writing')
         f.close()
         # Print the received data for debugging
-        print('writing : {}'.format(data_str))
+        print('writing completed : {}'.format(data_str))
         
-        #kill_text_example()
+        kill_text_example()
         time.sleep(3)
         run_text_example()
 
@@ -128,14 +130,41 @@ def find_adapter(bus):
     return None
     
 def kill_text_example():
-    os.system("sudo pkill -f 'text-example'")
-    print("clear screen.")
+    # os.system("sudo pkill -f 'text-example'")
+    # print("clear screen.")
+    with open("/home/admin/rpi-rgb-led-matrix/examples-api-use/switch.txt", 'w') as f:
+        f.write("stop")
+    print('RGB-OFF')
+    os.system("pkill -f 'testscript'")
+    print('killed testscript.')
     return
     
 def run_text_example():
-    os.chdir("/home/admin/rpi-rgb-led-matrix/examples-api-use")
-    command = "sudo ./text-example --led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat-pwm"
-    os.system(command)
+    print("calling run_text_example ")
+    
+    #os.system("python /home/admin/rpi-rgb-led-matrix/examples-api-use/testscript.py")
+    subprocess.Popen(['python','/home/admin/rpi-rgb-led-matrix/examples-api-use/testscript.py'])
+    print("testscript called")
+    #os.system("pkill -f 'testscript'")
+    #print("testscript killed")
+    
+    #print("kill-tesrscript()")
+
+    
+    #print("testscript-kill")
+    # print("start_testscript")
+    # os.chdir("/home/admin/rpi-rgb-led-matrix/examples-api-use")
+    # command = "sudo ./text-example --led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat-pwm"
+    # os.system(command)
+    # try:
+        # with open("/home/admin/rpi-rgb-led-matrix/examples-api-use/switch.txt", 'w') as f:
+            # f.write("start.")
+        # print('RGB-ON')
+    # except Exception as e:
+        # print('Error:testscript1: {}'.format(e))
+    # command = "sudo /home/admin/rpi-rgb-led-matrix/examples-api-use/text-example --led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat-pwm"
+    # os.system(command)
+
     return
     
 def main():
@@ -239,7 +268,7 @@ class RxCharacteristic(Characteristic):
         data_str = byte_array.decode('utf-8')
 
         # Store the received string in the "rgb_text.txt" file
-        file_path = '/home/admin/rgb_text.txt'
+        file_path = '/home/admin/rpi-rgb-led-matrix/examples-api-use/rgb_text.txt'
         with open(file_path, 'wb') as f:
             f.write(data_str.encode('utf-8'))
         f.close()
@@ -302,14 +331,45 @@ def find_adapter(bus):
     return None
     
 def kill_text_example():
-    os.system("sudo pkill -f 'text-example'")
-    print("clear screen.")
+    print("kill()") 
+
+    os.system("python /home/admin/rpi-rgb-led-matrix/examples-api-use/testscript2.py")
+    print("testscript2->")
+    
+    
+    # try:
+        # with open("/home/admin/rpi-rgb-led-matrix/examples-api-use/switch.txt", 'w') as f:
+            # f.write("stop")
+        # print('RGB-KILL')
+    # except Exception as e:
+        # print('Error testscript2: {}'.format(e))
+    
+
     return
     
 def run_text_example():
-    os.chdir("/home/admin/rpi-rgb-led-matrix/examples-api-use")
-    command = "sudo ./text-example --led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat-pwm"
-    os.system(command)
+    print("run()")
+    
+    os.system("python /home/admin/rpi-rgb-led-matrix/examples-api-use/testscript.py")
+    print("testscript->")
+    
+    #print("kill-tesrscript()")
+
+    
+    #print("testscript-kill")
+    # print("start_testscript")
+    # os.chdir("/home/admin/rpi-rgb-led-matrix/examples-api-use")
+    # command = "sudo ./text-example --led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat-pwm"
+    # os.system(command)
+    # try:
+        # with open("/home/admin/rpi-rgb-led-matrix/examples-api-use/switch.txt", 'w') as f:
+            # f.write("start.")
+        # print('RGB-ON')
+    # except Exception as e:
+        # print('Error:testscript1: {}'.format(e))
+    # command = "sudo /home/admin/rpi-rgb-led-matrix/examples-api-use/text-example --led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat-pwm"
+    # os.system(command)
+
     return
     
 def main():
