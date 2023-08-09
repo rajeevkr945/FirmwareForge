@@ -63,6 +63,8 @@ int main(int argc, char *argv[]) {
   int x_orig = 0;
   int y_orig = 0;
   int letter_spacing = 0;
+  int flag = 0;
+  char content[10];
 
   int opt;
   while ((opt = getopt(argc, argv, "x:y:f:C:B:O:S:F:")) != -1) {
@@ -103,7 +105,7 @@ int main(int argc, char *argv[]) {
   
     //file for font
   
-  FILE* font_file_ptr = fopen("/home/admin/font_file.txt", "r");
+  FILE* font_file_ptr = fopen("/home/admin/rpi-rgb-led-matrix/examples-api-use/font_file.txt", "r");
     if (!font_file_ptr) {
         fprintf(stderr, "Failed to open the font file.\n");
         return 1;
@@ -168,7 +170,7 @@ int main(int argc, char *argv[]) {
 
   // Open the file 
   
-  FILE* input_file = fopen("/home/admin/rgb_text.txt", "r"); // Replace with the path to your text file.
+  FILE* input_file = fopen("/home/admin/rpi-rgb-led-matrix/examples-api-use/rgb_text.txt", "r"); // Replace with the path to your text file.
 
   if (!input_file) {
     fprintf(stderr, "Failed to open the input file.\n");
@@ -203,7 +205,7 @@ int main(int argc, char *argv[]) {
       // as we want to have the same letter pitch as the regular text that
       // we then write on top.
       rgb_matrix::DrawText(canvas, *outline_font,
-                           x - 1, y + font.baseline(),
+                          x - 1, y + font.baseline(),
                            outline_color, &bg_color, line, letter_spacing - 2);
     }
     // The regular text.
@@ -215,7 +217,27 @@ int main(int argc, char *argv[]) {
 
   // Close the file after use.
   fclose(input_file);
-  while(1){
+  flag = 1;   
+  while(flag)
+    {   
+        
+        FILE *fptr = fopen("/home/admin/rpi-rgb-led-matrix/examples-api-use/switch.txt", "r");
+        
+        if (fgets(content, sizeof(content), fptr) != NULL) {
+          content[strcspn(content,"\n")] = '\0';
+          
+          //fprintf(stderr,"-%s-",content);
+            
+            if (strncmp(content, "stop",4) == 0) {
+                
+                flag = 0;
+            }
+            else { 
+             fprintf(stderr, "\n no stop recieved %s",content); }
+        }
+
+        fclose(fptr);
+        sleep(2);
     }
 
   // Finished. Shut down the RGB matrix.
