@@ -14,9 +14,11 @@ DBUS_OM_IFACE =                'org.freedesktop.DBus.ObjectManager'
 LE_ADVERTISING_MANAGER_IFACE = 'org.bluez.LEAdvertisingManager1'
 GATT_MANAGER_IFACE =           'org.bluez.GattManager1'
 GATT_CHRC_IFACE =              'org.bluez.GattCharacteristic1'
-UART_SERVICE_UUID =            '6e400001-b5a3-f393-e0a9-e50e24dcca9e'
-UART_RX_CHARACTERISTIC_UUID =  '6e400002-b5a3-f393-e0a9-e50e24dcca9e'
-UART_TX_CHARACTERISTIC_UUID =  '6e400003-b5a3-f393-e0a9-e50e24dcca9e'
+UART_SERVICE_UUID =                 '6e400001-b5a3-f393-e0a9-e50e24dcca9e'
+UART_TX_CHARACTERISTIC_UUID =       '6e400003-b5a3-f393-e0a9-e50e24dcca9e'
+UART_RX_CHARACTERISTIC_UUID =       '6e400002-b5a3-f393-e0a9-e50e24dcca9e'
+UART_RX_CHARACTERISTIC_NEW_UUID =   '6e400004-b5a3-f393-e0a9-e50e24dcca9e'
+
 LOCAL_NAME =                   'rpi-gatt-server'
 mainloop = None
 
@@ -56,7 +58,7 @@ class TxCharacteristic(Characteristic):
 class RxCharacteristic(Characteristic):
     def __init__(self, bus, index, service):
         Characteristic.__init__(self, bus, index, UART_RX_CHARACTERISTIC_UUID,
-                                ['write'], service)
+                                ['read','write'], service)
 
     def WriteValue(self, value, options):
         print('entering write value'.format(bytearray(value).decode()))
@@ -78,12 +80,38 @@ class RxCharacteristic(Characteristic):
         time.sleep(3)
         run_text_example()
 
+class RxCharacteristic_new(Characteristic):
+    def __init__(self, bus, index, service):
+        Characteristic.__init__(self, bus, index, UART_RX_CHARACTERISTIC_NEW_UUID,
+                                ['read','write'], service)
+
+    def WriteValue(self, value, options):
+        print('entering write value_new'.format(bytearray(value).decode()))
+        byte_array = bytearray(value)
+
+        # Convert the received byte array to a string
+        data_str = byte_array.decode('utf-8')
+
+        # Store the received string in the "rgb_text.txt" file
+        file_path = '/home/admin/rpi-rgb-led-matrix/examples-api-use/color_text.txt'
+        with open(file_path, 'wb') as f:
+            f.write(data_str.encode('utf-8'))
+            print('writing_color')
+        f.close()
+        # Print the received data for debugging
+        print('writing completed : {}'.format(data_str))
+        
+        kill_text_example()
+        time.sleep(3)
+        run_text_example()
+
 
 class UartService(Service):
     def __init__(self, bus, index):
         Service.__init__(self, bus, index, UART_SERVICE_UUID, True)
         self.add_characteristic(TxCharacteristic(bus, 0, self))
         self.add_characteristic(RxCharacteristic(bus, 1, self))
+        self.add_characteristic(RxCharacteristic_new(bus, 2, self))
 
 class Application(dbus.service.Object):
     def __init__(self, bus):
@@ -201,3 +229,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
