@@ -10,7 +10,7 @@ try:
         f.write("start")
         print('start written to file')
     print('turning on Display')
-    command = "sudo /home/admin/rpi-rgb-led-matrix/examples-api-use/text-example --led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat-pwm"
+    command = " sudo ./scrolling-text-example  -led-no-hardware-pulse --led-cols=64 --led-rows=64 --led-gpio-mapping=adafruit-hat --led-chain=4 -y 40 --led-no-drop-privs  --led-slowdown-gpio=4"
     os.system(command)
     print('Display Started')
     
