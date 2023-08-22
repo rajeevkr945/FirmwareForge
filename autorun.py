@@ -17,11 +17,11 @@ usb_device_path = get_usb_device_path(usb_device_name)
 while(1):
 	time.sleep(1)
 	usb_device_path = get_usb_device_path(usb_device_name)
-	if usb_device_path:
+	if usb_device_path and flag==0 :
 		os.system('feh -Z -z -F -D 3 --hide-pointer --auto-rotate -r /media')
 		print(f"USB device path: {usb_device_path}")
 		flag = 1
-	elif usb_device_path == None and flag == 1:
+	elif not usb_device_path and flag == 1:
 		print("USB device not found.")
 		flag=0
 	 
