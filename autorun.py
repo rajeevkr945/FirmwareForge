@@ -8,7 +8,7 @@ def get_usb_device_path(device_name):
     print(result)
     return result
 
-usb_device_name = "sd"  # Replace with the identifier of your USB device (e.g., "sd", "sdb", etc.)
+usb_device_name = "sandisk"  # Replace with the identifier of your USB device (e.g., "sd", "sdb", etc.)
 
 usb_device_path = get_usb_device_path(usb_device_name)
 
