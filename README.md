@@ -17,7 +17,7 @@ Welcome to my repository showcasing various embedded projects! This repository c
 ## Projects
 
 <details>
-<summary>Project 1: Smart Home Automation</summary>
+<summary>Project 1:nRF52840 LongRange CodedPHY </summary>
 
 ```markdown
 # Project 1: Smart Home Automation
