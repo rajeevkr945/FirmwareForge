@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		},
+		{
+			"file" : "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

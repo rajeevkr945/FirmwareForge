@@ -1,0 +1,39 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bootloader/esp-idf/esptool_py" && /home/dony/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/dony/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/dony/esp\ idf\ cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bootloader/bootloader.bin
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bt_app_core.c.obj
+[3/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+../main/main.c: In function 'l2cap_write_handle':
+../main/main.c:214:27: warning: initialization of 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  214 |     uint8_t *l2cap_data = 123456789;
+      |                           ^~~~~~~~~
+../main/main.c: In function 'esp_bt_l2cap_cb':
+../main/main.c:255:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  255 |     printf("initialised\n");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+../main/main.c:256:5: note: here
+  256 |     case ESP_BT_L2CAP_UNINIT_EVT:
+      |     ^~~~
+../main/main.c:258:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  258 |         printf("opened\n");
+      |         ^~~~~~~~~~~~~~~~~~
+../main/main.c:260:5: note: here
+  260 |     case ESP_BT_L2CAP_CLOSE_EVT:
+      |     ^~~~
+../main/main.c:263:13: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  263 |             printf("started\n");
+      |             ^~~~~~~~~~~~~~~~~~~
+../main/main.c:265:5: note: here
+  265 |     case ESP_BT_L2CAP_SRV_STOP_EVT: {
+      |     ^~~~
+[4/8] Linking C static library esp-idf/main/libmain.a
+[5/8] Generating ld/sections.ld
+[6/8] Linking CXX executable bt_l2cap_client.elf
+[7/8] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated /home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bt_l2cap_client.bin
+[8/8] cd "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/esp-idf/esptool_py" && /home/dony/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/dony/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/dony/esp\ idf\ cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/partition_table/partition-table.bin /home/dony/esp\ idf\ cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bt_l2cap_client.bin
+bt_l2cap_client.bin binary size 0xd8050 bytes. Smallest app partition is 0x100000 bytes. 0x27fb0 bytes (16%) free.

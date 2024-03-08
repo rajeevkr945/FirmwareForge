@@ -1,0 +1,610 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jul  3 2023 19:56:51[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2649ch (156828) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=000364c4 vaddr=3ffbdb60 size=044b0h ( 17584) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003a97c vaddr=40080000 size=0569ch ( 22172) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=94d3ch (609596) map[0m
+[0;32mI (400) esp_image: segment 4: paddr=000d4d64 vaddr=4008569c size=12db0h ( 77232) load[0m
+[0;32mI (445) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (445) boot: Disabling RNG early entropy source...[0m
+[0;32mI (456) cpu_start: Multicore app[0m
+[0;32mI (457) cpu_start: Pro cpu up.[0m
+[0;32mI (457) cpu_start: Starting app cpu, entry point is 0x400813ac[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (477) cpu_start: Pro cpu start user code[0m
+[0;32mI (477) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (477) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     bt_l2cap_server[0m
+[0;32mI (487) cpu_start: App version:      v5.2-dev-1349-gcf7e743a9b-dirty[0m
+[0;32mI (494) cpu_start: Compile time:     Jul  3 2023 19:56:42[0m
+[0;32mI (500) cpu_start: ELF file SHA256:  cb88d85fc1bc4ff2...[0m
+[0;32mI (506) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (511) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (516) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (521) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (526) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (533) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (545) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (551) heap_init: At 3FFC9FD0 len 00016030 (88 KiB): DRAM[0m
+[0;32mI (557) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (564) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (570) heap_init: At 4009844C len 00007BB4 (30 KiB): IRAM[0m
+[0;32mI (578) spi_flash: detected chip: generic[0m
+[0;32mI (581) spi_flash: flash io: dio[0m
+[0;33mW (585) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (599) coexist: coex firmware version: ebddf30[0m
+[0;32mI (604) app_start: Starting scheduler on CPU0[0m
+[0;32[0;32mI (608) app_start: Starting scheduler on CPU1[0m
+mI (608) main_task: Started on CPU0[0m
+[0;32mI (618) main_task: Calling app_main()[0m
+[0;32mI (648) BTDM_INIT: BT controller compile version [ad2b7cd][0m
+[0;32mI (658) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;32mI (1338) L2CAP_TAG: ESP_BT_L2CAP_INIT_EVT: status:0[0m
+[0;32mI (1348) L2CAP_TAG: ESP_BT_L2CAP_START_EVT: status:0, hdl:0x0, sec_id:0x37[0m
+[0;32mI (1348) SDP_TAG: ESP_SDP_INIT_EVT: status:0[0m
+[0;32mI (1348) SDP_TAG: ESP_SDP_CREATE_RECORD_COMP_EVT: status:0[0m
+[0;32mI (1358) L2CAP_TAG: event: 10[0m
+[0;32mI (1358) L2CAP_TAG: Own address:[78:21:84:df:09:aa][0m
+[0;32mI (1368) main_task: Returned from app_main()[0m
+[0;33mW (12478) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;33mW (12488) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000[0m
+[0;32mI (12488) L2CAP_TAG: event: 16[0m
+[0;33mW (12778) BT_APPL: new conn_srvc id:26, app_id:1[0m
+[0;33mW (12778) BT_APPL: bta_dm_pm_ssr conn_srvc id:26, app_id:1[0m
+[0;33mW (12778) BT_APPL: bta_dm_pm_ssr:2, lat:1200[0m
+[0;32mI (12788) L2CAP_TAG: ESP_BT_L2CAP_OPEN_EVT: status:0, fd = 3, tx mtu = 8087, remote_address:78:21:84:e1:87:0a[0m
+RD WR TASK STARTOPEN EVENTESP_BT_L2CAP_OPEN_EVT: status:0
+fd = 3
+tx mtu = 8087
+INSIDE RD HANDLEremote_address:78:21:84:e1:87:0a
+the data is 4?4?the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (13308) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13318) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13328) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13338) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13348) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13358) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13368) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13378) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13388) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13398) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13408) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13418) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (13928) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13938) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13948) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13958) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13968) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13978) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13988) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (13998) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14008) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14018) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14028) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14038) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14048) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (14558) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14568) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14578) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14588) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14598) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14608) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14618) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14628) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14638) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14648) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14658) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (14668) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (15178) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15188) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15198) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15208) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15218) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15228) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15238) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15248) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15258) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15268) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15278) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15288) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15298) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (15808) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15818) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15828) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15838) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15848) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15858) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15868) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15878) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15888) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15898) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15908) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (15918) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (16428) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16438) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16448) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16458) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16468) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16478) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16488) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16498) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16508) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16518) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16528) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16538) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (16548) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (17058) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17068) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17078) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17088) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17098) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17108) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17118) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17128) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17138) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17148) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17158) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17168) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (17678) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17688) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17698) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17708) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17718) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17728) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17738) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17748) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17758) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17768) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17778) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17788) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (17798) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (18308) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18318) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18328) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18338) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18348) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18358) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18368) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18378) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18388) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18398) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18408) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18418) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (18928) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18938) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18948) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18958) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18968) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18978) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18988) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (18998) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19008) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19018) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19028) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19038) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19048) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (19558) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19568) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19578) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19588) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19598) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19608) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19618) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19628) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19638) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19648) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19658) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (19668) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (20178) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20188) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20198) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20208) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20218) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20228) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20238) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20248) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20258) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20268) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20278) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20288) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20298) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (20808) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20818) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20828) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20838) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20848) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20858) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20868) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20878) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20888) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20898) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20908) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (20918) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (21428) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21438) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21448) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21458) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21468) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21478) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21488) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21498) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21508) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21518) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21528) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21538) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (21548) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (22058) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22068) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22078) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22088) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22098) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22108) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22118) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22128) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22138) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22148) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22158) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22168) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (22678) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22688) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22698) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22708) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22718) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22728) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22738) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22748) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22758) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22768) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22778) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (22788) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (23298) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23308) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23318) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23328) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23338) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23348) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23358) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23368) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23378) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23388) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23398) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23408) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23418) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (23928) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23938) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23948) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23958) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23968) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23978) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23988) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (23998) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24008) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24018) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24028) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24038) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24048) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (24558) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24568) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24578) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24588) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24598) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24608) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24618) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24628) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24638) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24648) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24658) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (24668) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (25178) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25188) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25198) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25208) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25218) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25228) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25238) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25248) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25258) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25268) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25278) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25288) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25298) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (25808) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25818) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25828) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25838) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25848) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25858) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25868) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25878) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25888) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25898) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25908) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (25918) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (26428) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26438) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26448) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26458) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26468) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26478) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26488) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26498) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26508) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26518) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26528) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26538) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (26548) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (27058) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27068) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27078) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27088) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27098) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27108) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27118) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27128) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27138) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27148) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27158) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27168) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (27678) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27688) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27698) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27708) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27718) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27728) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27738) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27748) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27758) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27768) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27778) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27788) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (27798) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (28308) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28318) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28328) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28338) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28348) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28358) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28368) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28378) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28388) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28398) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28408) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28418) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (28928) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28938) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28948) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28958) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28968) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28978) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28988) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (28998) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29008) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29018) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29028) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29038) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29048) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (29558) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29568) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29578) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29588) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29598) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29608) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29618) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29628) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29638) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29648) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29658) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (29668) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (30178) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30188) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30198) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30208) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30218) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30228) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30238) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30248) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30258) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30268) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30278) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30288) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30298) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (30808) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30818) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30828) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30838) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30848) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30858) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30868) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30878) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30888) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30898) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30908) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (30918) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (31428) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31438) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31448) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31458) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31468) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31478) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31488) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31498) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31508) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31518) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31528) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31538) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (31548) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (32058) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32068) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32078) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32088) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32098) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32108) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32118) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32128) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32138) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32148) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32158) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32168) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (32678) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32688) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32698) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32708) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32718) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32728) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32738) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32748) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32758) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32768) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32778) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32788) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (32798) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (33308) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33318) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33328) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33338) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33348) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33358) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33368) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33378) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33388) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33398) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33408) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33418) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (33928) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33938) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33948) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33958) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33968) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33978) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33988) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (33998) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34008) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34018) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34028) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34038) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34048) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (34558) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34568) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34578) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34588) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34598) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34608) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34618) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34628) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34638) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34648) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34658) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (34668) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (35178) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35188) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35198) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35208) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35218) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35228) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35238) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35248) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35258) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35268) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35278) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35288) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35298) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (35808) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35818) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35828) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35838) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35848) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35858) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35868) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35878) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35888) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35898) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35908) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (35918) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (36428) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36438) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36448) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36458) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36468) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36478) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36488) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36498) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36508) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36518) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36528) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36538) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (36548) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (37058) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37068) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37078) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37088) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37098) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37108) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37118) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37128) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37138) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37148) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37158) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37168) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (37678) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37688) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37698) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37708) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37718) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37728) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37738) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37748) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37758) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37768) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37778) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37788) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (37798) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (38308) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38318) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38328) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38338) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38348) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38358) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38368) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38378) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38388) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38398) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38408) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38418) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 100the fd is 3[0;32mI (38928) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38938) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38948) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38958) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38968) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38978) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 100the fd is 3[0;32mI (38988) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3[0;33mW (43748) BT_L2CAP: L2CAP - no CCB for L2CA_disc_req, CID: 65[0m
+[0;33mW (43748) BT_L2CAP: L2CAP - PSM: 0x1001 not found for deregistration[0m
+[0;33mW (43758) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x8[0m
+[0;32mI (43768) L2CAP_TAG: ESP_BT_L2CAP_CLOSE_EVT: status:0[0m
+[0;32mI (43768) L2CAP_TAG: ESP_BT_L2CAP_START_EVT: status:0, hdl:0x0, sec_id:0x37[0m
+the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size is 0the fd is 3the data is the size

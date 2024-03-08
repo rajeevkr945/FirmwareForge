@@ -1,0 +1,545 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jul  3 2023 19:56:51[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2649ch (156828) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=000364c4 vaddr=3ffbdb60 size=044b0h ( 17584) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003a97c vaddr=40080000 size=0569ch ( 22172) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=94d38h (609592) map[0m
+[0;32mI (400) esp_image: segment 4: paddr=000d4d60 vaddr=4008569c size=12db0h ( 77232) load[0m
+[0;32mI (445) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (445) boot: Disabling RNG early entropy source...[0m
+[0;32mI (456) cpu_start: Multicore app[0m
+[0;32mI (457) cpu_start: Pro cpu up.[0m
+[0;32mI (457) cpu_start: Starting app cpu, entry point is 0x400813ac[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (477) cpu_start: Pro cpu start user code[0m
+[0;32mI (477) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (477) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     bt_l2cap_server[0m
+[0;32mI (487) cpu_start: App version:      v5.2-dev-1349-gcf7e743a9b-dirty[0m
+[0;32mI (494) cpu_start: Compile time:     Jul  3 2023 19:56:42[0m
+[0;32mI (500) cpu_start: ELF file SHA256:  51f7f9a06cd755cc...[0m
+[0;32mI (506) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (511) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (516) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (521) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (526) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (533) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (545) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (551) heap_init: At 3FFC9FD0 len 00016030 (88 KiB): DRAM[0m
+[0;32mI (557) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (564) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (570) heap_init: At 4009844C len 00007BB4 (30 KiB): IRAM[0m
+[0;32mI (578) spi_flash: detected chip: generic[0m
+[0;32mI (581) spi_flash: flash io: dio[0m
+[0;33mW (585) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (599) coexist: coex firmware version: ebddf30[0m
+[0;32mI (604) app_start: Starting scheduler on CPU0[0m
+[0;32[0;32mI (608) app_start: Starting scheduler on CPU1[0m
+mI (608) main_task: Started on CPU0[0m
+[0;32mI (618) main_task: Calling app_main()[0m
+[0;32mI (648) BTDM_INIT: BT controller compile version [ad2b7cd][0m
+[0;32mI (658) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+[0;32mI (1338) L2CAP_TAG: ESP_BT_L2CAP_INIT_EVT: status:0[0m
+[0;32mI (1348) L2CAP_TAG: ESP_BT_L2CAP_START_EVT: status:0, hdl:0x0, sec_id:0x37[0m
+[0;32mI (1348) SDP_TAG: ESP_SDP_INIT_EVT: status:0[0m
+[0;32mI (1348) SDP_TAG: ESP_SDP_CREATE_RECORD_COMP_EVT: status:0[0m
+[0;32mI (1358) L2CAP_TAG: event: 10[0m
+[0;32mI (1358) L2CAP_TAG: Own address:[78:21:84:df:09:aa][0m
+[0;32mI (1368) main_task: Returned from app_main()[0m
+[0;33mW (13768) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;33mW (13778) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000[0m
+[0;32mI (13778) L2CAP_TAG: event: 16[0m
+[0;33mW (14018) BT_APPL: new conn_srvc id:26, app_id:1[0m
+[0;33mW (14018) BT_APPL: bta_dm_pm_ssr conn_srvc id:26, app_id:1[0m
+[0;33mW (14018) BT_APPL: bta_dm_pm_ssr:2, lat:1200[0m
+[0;32mI (14028) L2CAP_TAG: ESP_BT_L2CAP_OPEN_EVT: status:0, fd = 3, tx mtu = 8087, remote_address:78:21:84:e1:87:0a[0m
+RD WR TASK STARTOPEN EVENTESP_BT_L2CAP_OPEN_EVT: status:0
+fd = 3
+tx mtu = 8087
+INSIDE RD HANDLEremote_address:78:21:84:e1:87:0a
+the data is 4?4?4?4?Ȼ?+
+the size is 0
+the fd is 3
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14558) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14568) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14578) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14588) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14598) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14608) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14618) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14628) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14638) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14648) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14658) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14668) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (14678) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 0
+the fd is 3
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15188) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15198) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15208) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15218) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15228) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15238) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15248) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15258) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15268) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15278) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15288) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15298) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 0
+the fd is 3
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15808) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15818) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15828) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15838) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15848) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15858) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15868) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15878) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15888) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15898) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15908) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15918) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (15928) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 0
+the fd is 3
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16438) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16448) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16458) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16468) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16478) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16488) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16498) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16508) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16518) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16528) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16538) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (16548) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 0
+the fd is 3
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17058) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17068) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17078) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17088) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17098) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17108) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17118) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17128) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17138) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17148) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17158) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17168) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17178) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 0
+the fd is 3
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17688) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17698) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17708) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17718) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17728) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17738) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17748) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17758) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17768) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17778) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17788) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (17798) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 0
+the fd is 3
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18308) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18318) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18328) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18338) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18348) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18358) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18368) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18378) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18388) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18398) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18408) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18418) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 0
+the fd is 3
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18928) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18938) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18948) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18958) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18968) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18978) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18988) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (18998) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (19008) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (19018) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (19028) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (19038) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (19048) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 0
+the fd is 3
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (19558) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (19568) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (19578) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (19588) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (19598) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 100
+the fd is 3
+[0;32mI (19608) L2CAP_TAG: fd = 3 data_len = 100[0m
+the data is 
+the size is 0
+the fd is 3
+the data is 
+the size is 0
+the fd is 3
+the data is 
+the size is 0
+the fd is 3

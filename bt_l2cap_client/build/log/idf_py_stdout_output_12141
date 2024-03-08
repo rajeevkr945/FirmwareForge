@@ -1,0 +1,203 @@
+m[0m
+[0;3ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jul  3 2023 15:57:50[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2661ch (157212) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00036644 vaddr=3ffbdb60 size=044b0h ( 17584) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003aafc vaddr=40080000 size=0551ch ( 21788) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=950ech (610540) map[0m
+[0;32mI (400) esp_image: segment 4: paddr=000d5114 vaddr=4008551c size=12f30h ( 77616) load[0m
+[0;32mI (445) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (445) boot: Disabling RNG early entropy source...[0m
+[0;32mI (457) cpu_start: Multicore app[0m
+[0;32mI (457) cpu_start: Pro cpu up.[0m
+[0;32mI (457) cpu_start: Starting app cpu, entry point is 0x400813ac[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (477) cpu_start: Pro cpu start user code[0m
+[0;32mI (477) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (477) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     bt_l2cap_client[0m
+[0;32mI (488) cpu_start: App version:      v5.2-dev-1349-gcf7e743a9b-dirty[0m
+[0;32mI (495) cpu_start: Compile time:     Jul  3 2023 17:06:12[0m
+[0;32mI (501) cpu_start: ELF file SHA256:  48d00f7e1f198bae...[0m
+[0;32mI (507) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (512) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (517) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (522) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (526) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (534) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (539) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (546) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (552) heap_init: At 3FFC9FD0 len 00016030 (88 KiB): DRAM[0m
+[0;32mI (558) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (564) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (571) heap_init: At 4009844C len 00007BB4 (30 KiB): IRAM[0m
+[0;32mI (578) spi_flash: detected chip: generic[0m
+[0;32mI (582) spi_flash: flash io: dio[0m
+[0;33mW (585) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (599) coexist: coex firmware version: ebddf30[0m
+[0;32mI (604) app_start: Starting scheduler on CPU0[0m
+[0;32[0;32mI (609) app_start: Starting scheduler on CPU1[0m
+mI (609) main_task: Started on CPU0[0m
+[0;32mI (619) main_task: Calling app_main()[0m
+[0;32mI (649) BTDM_INIT: BT controller compile version [ad2b7cd][0m
+[0;32mI (659) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+initialised
+opened
+started
+[0;32mI (1359) L2CAP_TAG: ESP_BT_L2CAP_INIT_EVT: status:0[0m
+[0;32mI (1359) SDP_TAG: ESP_SDP_INIT_EVT: status:0[0m
+[0;32mI (1369) SDP_TAG: ESP_SDP_CREATE_RECORD_COMP_EVT: status:0[0m
+[0;32mI (1379) L2CAP_TAG: event: 10[0m
+[0;32mI (1379) L2CAP_TAG: Own address:[78:21:84:df:09:aa][0m
+[0;32mI (1389) L2CAP_TAG: event: 1[0m
+[0;32mI (1389) main_task: Returned from app_main()[0m
+[0;32mI (2489) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (2499) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (2499) L2CAP_TAG: --RSSI: -36[0m
+GAP. DISCOVRY
+[0;32mI (2719) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (2719) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (2719) L2CAP_TAG: --RSSI: -35[0m
+GAP. DISCOVRY
+[0;32mI (3009) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (3009) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (3009) L2CAP_TAG: --RSSI: -30[0m
+GAP. DISCOVRY
+[0;32mI (3399) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (3399) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (3399) L2CAP_TAG: --RSSI: -32[0m
+GAP. DISCOVRY
+[0;32mI (3769) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (3769) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (3769) L2CAP_TAG: --RSSI: -32[0m
+GAP. DISCOVRY
+[0;32mI (3919) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (3919) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (3919) L2CAP_TAG: --RSSI: -32[0m
+GAP. DISCOVRY
+[0;32mI (3979) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (3979) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (3979) L2CAP_TAG: --RSSI: -36[0m
+GAP. DISCOVRY
+[0;32mI (4619) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (4619) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (4619) L2CAP_TAG: --RSSI: -31[0m
+GAP. DISCOVRY
+[0;32mI (4809) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (4809) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (4809) L2CAP_TAG: --RSSI: -35[0m
+GAP. DISCOVRY
+[0;32mI (5099) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (5099) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (5099) L2CAP_TAG: --RSSI: -31[0m
+GAP. DISCOVRY
+[0;32mI (5139) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (5139) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (5139) L2CAP_TAG: --RSSI: -35[0m
+GAP. DISCOVRY
+[0;32mI (5629) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (5629) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (5629) L2CAP_TAG: --RSSI: -35[0m
+GAP. DISCOVRY
+[0;32mI (5799) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (5799) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (5799) L2CAP_TAG: --RSSI: -32[0m
+GAP. DISCOVRY
+[0;32mI (6249) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (6249) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (6259) L2CAP_TAG: --RSSI: -35[0m
+GAP. DISCOVRY
+[0;32mI (6499) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (6499) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (6499) L2CAP_TAG: --RSSI: -31[0m
+GAP. DISCOVRY
+[0;32mI (7889) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (7889) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (7889) L2CAP_TAG: --RSSI: -33[0m
+GAP. DISCOVRY
+[0;32mI (8119) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (8119) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (8119) L2CAP_TAG: --RSSI: -32[0m
+GAP. DISCOVRY
+[0;32mI (8669) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (8669) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (8669) L2CAP_TAG: --RSSI: -32[0m
+GAP. DISCOVRY
+[0;32mI (9059) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (9059) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (9059) L2CAP_TAG: --RSSI: -35[0m
+GAP. DISCOVRY
+[0;32mI (9129) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (9129) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (9129) L2CAP_TAG: --RSSI: -31[0m
+GAP. DISCOVRY
+[0;32mI (9509) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (9509) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (9509) L2CAP_TAG: --RSSI: -34[0m
+GAP. DISCOVRY
+[0;32mI (9989) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (9989) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (9989) L2CAP_TAG: --RSSI: -31[0m
+GAP. DISCOVRY
+[0;32mI (10289) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (10289) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (10289) L2CAP_TAG: --RSSI: -35[0m
+GAP. DISCOVRY
+[0;32mI (11649) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (11649) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (11649) L2CAP_TAG: --RSSI: -32[0m
+GAP. DISCOVRY
+[0;32mI (11839) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (11839) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (11849) L2CAP_TAG: --RSSI: -35[0m
+GAP. DISCOVRY
+[0;32mI (12129) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (12129) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (12129) L2CAP_TAG: --RSSI: -31[0m
+GAP. DISCOVRY
+[0;32mI (12799) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (12799) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (12799) L2CAP_TAG: --RSSI: -34[0m
+GAP. DISCOVRY
+[0;32mI (12899) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (12899) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (12899) L2CAP_TAG: --RSSI: -32[0m
+GAP. DISCOVRY
+[0;32mI (13059) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (13059) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (13059) L2CAP_TAG: --RSSI: -31[0m
+GAP. DISCOVRY
+[0;32mI (13559) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (13559) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (13559) L2CAP_TAG: --RSSI: -32[0m
+GAP. DISCOVRY
+[0;32mI (13779) L2CAP_TAG: Scanned device: bc:1d:89:58:37:2c[0m
+[0;32mI (13779) L2CAP_TAG: --Class of Device: 0x5a020c[0m
+[0;32mI (13779) L2CAP_TAG: --RSSI: -32[0m
+GAP. DISCOVRY
+[0;32mI (14199) L2CAP_TAG: event: 1[0m

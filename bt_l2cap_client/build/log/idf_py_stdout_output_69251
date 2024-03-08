@@ -1,0 +1,208 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jul  3 2023 15:57:50[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2663ch (157244) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00036664 vaddr=3ffbdb60 size=044b0h ( 17584) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003ab1c vaddr=40080000 size=054fch ( 21756) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=951f0h (610800) map[0m
+[0;32mI (400) esp_image: segment 4: paddr=000d5218 vaddr=400854fc size=12f50h ( 77648) load[0m
+[0;32mI (445) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (445) boot: Disabling RNG early entropy source...[0m
+[0;32mI (457) cpu_start: Multicore app[0m
+[0;32mI (457) cpu_start: Pro cpu up.[0m
+[0;32mI (457) cpu_start: Starting app cpu, entry point is 0x400813ac[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (477) cpu_start: Pro cpu start user code[0m
+[0;32mI (477) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (477) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     bt_l2cap_client[0m
+[0;32mI (488) cpu_start: App version:      v5.2-dev-1349-gcf7e743a9b-dirty[0m
+[0;32mI (495) cpu_start: Compile time:     Jul  3 2023 17:06:12[0m
+[0;32mI (501) cpu_start: ELF file SHA256:  16c31f58914e742b...[0m
+[0;32mI (507) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (512) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (517) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (522) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (527) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (534) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (540) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (546) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (552) heap_init: At 3FFC9FD0 len 00016030 (88 KiB): DRAM[0m
+[0;32mI (558) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (564) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (571) heap_init: At 4009844C len 00007BB4 (30 KiB): IRAM[0m
+[0;32mI (579) spi_flash: detected chip: generic[0m
+[0;32mI (582) spi_flash: flash io: dio[0m
+[0;33mW (586) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (600) coexist: coex firmware version: ebddf30[0m
+[0;32mI (605) app_start: Starting scheduler on CPU0[0m
+[0;32[0;32mI (609) app_start: Starting scheduler on CPU1[0m
+mI (609) main_task: Started on CPU0[0m
+[0;32mI (619) main_task: Calling app_main()[0m
+[0;32mI (649) BTDM_INIT: BT controller compile version [ad2b7cd][0m
+[0;32mI (659) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+initialised
+opened
+started
+[0;32mI (1369) L2CAP_TAG: ESP_BT_L2CAP_INIT_EVT: status:0[0m
+[0;32mI (1369) SDP_TAG: ESP_SDP_INIT_EVT: status:0[0m
+[0;32mI (1369) SDP_TAG: ESP_SDP_CREATE_RECORD_COMP_EVT: status:0[0m
+[0;32mI (1379) L2CAP_TAG: event: 10[0m
+[0;32mI (1389) L2CAP_TAG: Own address:[78:21:84:e1:87:0a][0m
+[0;32mI (1389) L2CAP_TAG: event: 1[0m
+[0;32mI (1389) main_task: Returned from app_main()[0m
+[0;32mI (7029) L2CAP_TAG: Scanned device: 78:21:84:df:09:aa[0m
+[0;32mI (7029) L2CAP_TAG: --Class of Device: 0x1f00[0m
+[0;32mI (7029) L2CAP_TAG: --RSSI: -57[0m
+[0;32mI (7029) L2CAP_TAG: Found a target device, address 78:21:84:df:09:aa, name Moto[0m
+[0;32mI (7039) L2CAP_TAG: Cancel device discovery ...[0m
+GAP. DISCOVRY
+[0;32mI (7049) L2CAP_TAG: event: 1[0m
+[0;33mW (7789) BT_HCI: hcif conn complete: hdl 0x81, st 0x0[0m
+[0;32mI (7799) L2CAP_TAG: event: 16[0m
+[0;32mI (7919) SDP_TAG: ESP_SDP_SEARCH_COMP_EVT: status:0[0m
+[0;32mI (7929) SDP_TAG: Remote device address: 78:21:84:df:09:aa[0m
+[0;32mI (7929) SDP_TAG: Remote device record count: 1[0m
+[0;32mI (7929) SDP_TAG: Remote device rfcomm channel number: -1[0m
+[0;32mI (7939) SDP_TAG: Remote device l2cap psm: 0x1001[0m
+started
+[0;32mI (7949) L2CAP_TAG: ESP_BT_L2CAP_CL_INIT_EVT: status:0[0m
+[0;33mW (8079) BT_APPL: new conn_srvc id:26, app_id:1[0m
+[0;33mW (8079) BT_APPL: bta_dm_pm_ssr conn_srvc id:26, app_id:1[0m
+[0;33mW (8079) BT_APPL: bta_dm_pm_ssr:2, lat:1200[0m
+opened
+started
+[0;32mI (8089) L2CAP_TAG: ESP_BT_L2CAP_OPEN_EVT: status:0, fd = 3, tx mtu = 8087, remote_address:78:21:84:df:09:aa[0m
+data is  
+
+[0;32mI (8099) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (10109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (12109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (14109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (16109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (18109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (20109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (22109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (24109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (26109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (28109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (30109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;32mI (32109) L2CAP_TAG: fd = 3  data_len = 100[0m
+[0;33mW (32329) BT_HCI: hcif disc complete: hdl 0x81, rsn 0x8[0m
+started
+[0;32mI (32329) L2CAP_TAG: ESP_BT_L2CAP_CLOSE_EVT: status:0[0m
+[0;31mE (34109) FreeRTOS: FreeRTOS Task "write_read" should not return, Aborting now![0m
+
+abort() was called at PC 0x4009367f on core 0
+
+
+Backtrace: 0x40081a46:0x3ffd3160 0x40090df5:0x3ffd3180 0x400966de:0x3ffd31a0 0x4009367f:0x3ffd3210
+
+
+
+
+ELF file SHA256: 16c31f58914e742b
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7084
+ho 0 tail 12 room 4
+load:0x40078000,len:15576
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (32) boot: ESP-IDF v5.1-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Jul  3 2023 15:57:50[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.0[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2663ch (157244) map[0m
+[0;32mI (163) esp_image: segment 1: paddr=00036664 vaddr=3ffbdb60 size=044b0h ( 17584) load[0m
+[0;32mI (170) esp_image: segment 2: paddr=0003ab1c vaddr=40080000 size=054fch ( 21756) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=951f0h (610800) map[0m
+[0;32mI (400) esp_image: segment 4: paddr=000d5218 vaddr=400854fc size=12f50h ( 77648) load[0m
+[0;32mI (445) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (445) boot: Disabling RNG early entropy source...[0m
+[0;32mI (457) cpu_start: Multicore app[0m
+[0;32mI (457) cpu_start: Pro cpu up.[0m
+[0;32mI (457) cpu_start: Starting app cpu, entry point is 0x400813ac[0m
+[0;32mI (446) cpu_start: App cpu up.[0m
+[0;32mI (477) cpu_start: Pro cpu start user code[0m
+[0;32mI (477) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (478) cpu_start: Application information:[0m
+[0;32mI (482) cpu_start: Project name:     bt_l2cap_client[0m
+[0;32mI (488) cpu_start: App version:      v5.2-dev-1349-gcf7e743a9b-dirty[0m
+[0;32mI (495) cpu_start: Compile time:     Jul  3 2023 17:06:12[0m
+[0;32mI (501) cpu_start: ELF file SHA256:  16c31f58914e742b...[0m
+[0;32mI (507) cpu_start: ESP-IDF:          v5.1-dirty[0m
+[0;32mI (512) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (517) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (522) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (527) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (534) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (540) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (546) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (552) heap_init: At 3FFC9FD0 len 00016030 (88 KiB): DRAM[0m
+[0;32mI (558) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (564) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (571) heap_init: At 4009844C len 00007BB4 (30 KiB): IRAM[0m
+[0;32mI (579) spi_flash: detected chip: generic[0m
+[0;32mI (582) spi_flash: flash io: dio[0m
+[0;33mW (586) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (600) coexist: coex firmware version: ebddf30[0m
+[0;32mI (605) app_start: Starting scheduler on CPU0[0m
+[0;32[0;32mI (609) app_start: Starting scheduler on CPU1[0m
+mI (609) main_task: Started on CPU0[0m
+[0;32mI (619) main_task: Calling app_main()[0m
+[0;32mI (649) BTDM_INIT: BT controller compile version [ad2b7cd][0m
+[0;32mI (659) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+initialised
+opened
+started
+[0;32mI (1359) L2CAP_TAG: ESP_BT_L2CAP_INIT_EVT: status:0[0m
+[0;32mI (1369) SDP_TAG: ESP_SDP_INIT_EVT: status:0[0m
+[0;32mI (1369) SDP_TAG: ESP_SDP_CREATE_RECORD_COMP_EVT: status:0[0m
+[0;32mI (1379) L2CAP_TAG: event: 10[0m
+[0;32mI (1379) L2CAP_TAG: Own address:[78:21:84:e1:87:0a][0m
+[0;32mI (1389) L2CAP_TAG: event: 1[0m
+[0;32mI (1389) main_task: Returned from app_main()[0m
+[0;32mI (14199) L2CAP_TAG: event: 1[0m

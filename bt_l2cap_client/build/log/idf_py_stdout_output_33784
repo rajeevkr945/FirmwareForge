@@ -1,0 +1,100 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bootloader/esp-idf/esptool_py" && /home/dony/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/dony/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/dony/esp\ idf\ cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bootloader/bootloader.bin
+Bootloader binary size 0x6810 bytes. 0x7f0 bytes (7%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+../main/main.c: In function 'esp_bt_l2cap_cb':
+../main/main.c:253:5: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  253 |     printf("initialised\n");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+../main/main.c:254:5: note: here
+  254 |     case ESP_BT_L2CAP_UNINIT_EVT:
+      |     ^~~~
+../main/main.c:256:9: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  256 |         printf("opened\n");
+      |         ^~~~~~~~~~~~~~~~~~
+../main/main.c:258:5: note: here
+  258 |     case ESP_BT_L2CAP_CLOSE_EVT:
+      |     ^~~~
+../main/main.c:261:13: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  261 |             printf("started\n");
+      |             ^~~~~~~~~~~~~~~~~~~
+../main/main.c:263:5: note: here
+  263 |     case ESP_BT_L2CAP_SRV_STOP_EVT: {
+      |     ^~~~
+[3/8] Linking C static library esp-idf/main/libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable bt_l2cap_client.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated /home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bt_l2cap_client.bin
+[7/8] cd "/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/esp-idf/esptool_py" && /home/dony/.espressif/python_env/idf5.1_py3.8_env/bin/python /home/dony/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/dony/esp\ idf\ cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/partition_table/partition-table.bin /home/dony/esp\ idf\ cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build/bt_l2cap_client.bin
+bt_l2cap_client.bin binary size 0xd8040 bytes. Smallest app partition is 0x100000 bytes. 0x27fc0 bytes (16%) free.
+[7/8] cd /home/dony/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/dony/esp/esp-idf -D "SERIAL_TOOL=/home/dony/.espressif/python_env/idf5.1_py3.8_env/bin/python;;/home/dony/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D "WORKING_DIRECTORY=/home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_client/build" -P /home/dony/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 bt_l2cap_client.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.6.2
+Serial port /dev/ttyUSB0
+Connecting...............
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 78:21:84:df:09:a8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000e8fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26640 bytes to 16668...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000769b... (100 %)
+Wrote 26640 bytes (16668 compressed) at 0x00001000 in 0.9 seconds (effective 240.0 kbit/s)...
+Hash of data verified.
+Compressed 884800 bytes to 525237...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001d0eb... (6 %)
+Writing at 0x0002bba1... (9 %)
+Writing at 0x00039aaa... (12 %)
+Writing at 0x0003fcac... (15 %)
+Writing at 0x00045818... (18 %)
+Writing at 0x0004b59d... (21 %)
+Writing at 0x00050d87... (24 %)
+Writing at 0x000561c6... (27 %)
+Writing at 0x0005c8ee... (30 %)
+Writing at 0x0006242f... (33 %)
+Writing at 0x00068080... (36 %)
+Writing at 0x0006df94... (39 %)
+Writing at 0x000740c3... (42 %)
+Writing at 0x00079c96... (45 %)
+Writing at 0x0007f71d... (48 %)
+Writing at 0x000854a7... (51 %)
+Writing at 0x0008af0a... (54 %)
+Writing at 0x00090a47... (57 %)
+Writing at 0x00096920... (60 %)
+Writing at 0x0009c6f5... (63 %)
+Writing at 0x000a2600... (66 %)
+Writing at 0x000a88d8... (69 %)
+Writing at 0x000ae814... (72 %)
+Writing at 0x000b4292... (75 %)
+Writing at 0x000b9cfb... (78 %)
+Writing at 0x000bff82... (81 %)
+Writing at 0x000c81bc... (84 %)
+Writing at 0x000d04b8... (87 %)
+Writing at 0x000d64b0... (90 %)
+Writing at 0x000dc1ad... (93 %)
+Writing at 0x000e1ba6... (96 %)
+Writing at 0x000e796c... (100 %)
+Wrote 884800 bytes (525237 compressed) at 0x00010000 in 12.6 seconds (effective 559.7 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 336.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

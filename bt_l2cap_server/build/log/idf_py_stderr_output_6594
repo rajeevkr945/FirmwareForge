@@ -1,0 +1,23 @@
+[0;33m--- idf_monitor on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400813ac: call_start_cpu1 at /home/dony/esp/esp-idf/components/esp_system/port/cpu_start.c:154
+[0m
+[0;33m0x4000c52a: strcat in ROM
+[0m
+[0;33m0x400014fd: strlen in ROM
+[0m
+[0;33m0x4000150d: strlen in ROM
+[0m
+[0;33m0x4000c527: strcat in ROM
+[0m
+[0;33m0x400d7695: l2cap_read_handle at /home/dony/esp idf cloned/esp-idf/examples/bluetooth/bluedroid/classic_bt/bt_l2cap_server/build/../main/main.c:159 (discriminator 3)
+[0m
+[0;33m0x40093661: vPortTaskWrapper at /home/dony/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400813ac: call_start_cpu1 at /home/dony/esp/esp-idf/components/esp_system/port/cpu_start.c:154
+[0m
+[0m
