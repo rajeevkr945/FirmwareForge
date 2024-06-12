@@ -9,8 +9,8 @@ const char* ssid = "XXXXXX";
 const char* password = "XXXXXXXXX";
 
 // SoftAP Wifi and Password
-const char* apSSID = "TrueLogGateway";
-const char* apPassword = "admin12345678";   //password must have 8 characters
+const char* apSSID = "xxxxxxx";
+const char* apPassword = "xxxxxxx";   //password must have 8 characters
 
 unsigned long timeoutDuration = 50000; //time it stays as Acess Point
 
