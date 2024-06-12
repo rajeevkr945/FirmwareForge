@@ -1,0 +1,120 @@
+
+#include <BLEDevice.h>
+#include <BLEScan.h>
+#include <BLEAdvertisedDevice.h>
+#include <WiFi.h>
+
+// Staion Wifi and Password
+const char* ssid = "XXXXXX";
+const char* password = "XXXXXXXXX";
+
+// SoftAP Wifi and Password
+const char* apSSID = "TrueLogGateway";
+const char* apPassword = "admin12345678";   //password must have 8 characters
+
+unsigned long timeoutDuration = 50000; //time it stays as Acess Point
+
+int scanTime = 5; // In seconds
+BLEScan *pBLEScan;
+
+class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks {
+    void onResult(BLEAdvertisedDevice advertisedDevice) {
+
+      if (advertisedDevice.haveName())
+      {
+        
+      
+//        if(advertisedDevice.getName().c_str() == "XXXX")
+//        {
+//          Serial.print("Device name: ");
+//        Serial.println(advertisedDevice.getName().c_str());
+//        Serial.println("");
+          
+        
+        if (advertisedDevice.haveManufacturerData()) {
+            std::string strManufacturerData = advertisedDevice.getManufacturerData();
+            uint8_t cManufacturerData[255];
+            strManufacturerData.copy((char *)cManufacturerData, strManufacturerData.length(), 0);
+//            Serial.printf("[%X]", cManufacturerData[0]);
+//            Serial.printf("[%X]", cManufacturerData[1]);
+
+            
+            // Check if the manufacturer data contains the company ID 4499 (Check Endian)
+            if (strManufacturerData.length() >= 2 && cManufacturerData[0] == 0x04 && cManufacturerData[1] == 0x99) {
+                Serial.println("Found advertisement packet with manufacturer data '0499'");
+                
+                // Further processing can be done here if needed
+                
+                Serial.printf("Manufacturer Data Length: %d ", strManufacturerData.length());
+                for (int i = 0; i < strManufacturerData.length(); i++) {
+                  //Entire payload
+                    Serial.printf("[%X]", cManufacturerData[i]);
+                }
+                Serial.printf("\n");
+            }
+          }
+        
+      }
+    }
+};
+
+void setup() {
+  Serial.begin(115200);
+
+  startAPMode();
+
+  delay(timeoutDuration);
+
+  switchToStationMode();
+  Serial.println("BLE Scanning...");
+
+  BLEDevice::init("");
+  pBLEScan = BLEDevice::getScan(); // Create new scan
+  pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
+  pBLEScan->setActiveScan(true); // Active scan uses more power, but gets results faster
+  pBLEScan->setInterval(100);
+  pBLEScan->setWindow(99); // Less or equal setInterval value
+  
+}
+
+void startAPMode() {
+  Serial.println("Starting AP mode...");
+
+  // Configure the access point
+  WiFi.softAP(apSSID, apPassword);
+
+  Serial.println("AP mode started");
+  Serial.print("IP address: ");
+  Serial.println(WiFi.softAPIP());
+}
+
+void switchToStationMode() {
+  Serial.println("Switching to Station mode...");
+
+  WiFi.softAPdisconnect(true);
+    Serial.println("exit AP mode");
+
+
+  // Configure and connect to the Wi-Fi network
+  WiFi.begin(ssid, password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+
+  Serial.println("\nStation mode started");
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
+//  Serial.println(WiFi.);
+}
+
+void loop() {
+  // Put your main code here, to run repeatedly:
+  BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
+  Serial.print("Devices found: ");
+  Serial.println(foundDevices.getCount());
+  Serial.println("Scan done!");
+  pBLEScan->clearResults(); // Delete results from BLEScan buffer to release memory
+  delay(2000);
+}
